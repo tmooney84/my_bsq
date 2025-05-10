@@ -4,7 +4,8 @@
 #include <stdlib.h>
 #include <fcntl.h>
 
-#define buffer_length 8
+#define BUFFER_LENGTH 8
+#define NAME_LENGTH 255
 
 int min(int a, int b)
 {
@@ -63,21 +64,25 @@ int find_max_square(char **matrix, int length, int *square_info)
     return 0;
 }
 
-int main()
+int main(int /*argc*/, char ** argv)
 {
     // open file
-    FILE *fptr = fopen("file.txt", "r");
+    char file_name[NAME_LENGTH];
+    memset(file_name, '\0', NAME_LENGTH);
+    
+    strncpy(file_name, argv[1], NAME_LENGTH);
+    FILE *fptr = fopen(file_name, "r");
     if (!fptr)
     {
         allocation_error();
         return -1;
     }
 
-    char buffer[buffer_length];
+    char buffer[BUFFER_LENGTH];
     memset(buffer, '\0', sizeof(buffer));
 
     // get length
-    fgets(buffer, buffer_length, fptr);
+    fgets(buffer, BUFFER_LENGTH, fptr);
     int length = atoi(buffer);
 
     // create matrix
@@ -90,6 +95,7 @@ int main()
     }
 
     // fill matrix
+
     for (int i = 0; i < length; i++)
     {
         matrix[i] = (char *)calloc(length + 1, sizeof(char *));
