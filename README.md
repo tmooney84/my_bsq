@@ -1,5 +1,4 @@
 # Welcome to My Bsq
-***s
 
 ## Task
 my_bsq presents a matrix of '.'s and 'o's, and the program must find the largest square in an algorithmically efficient way.
