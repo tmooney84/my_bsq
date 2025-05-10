@@ -8,7 +8,7 @@ I used a dynamically programmed linear matrix to minimize the necessary time and
 
 ## Installation
 
-To install my_bsq:
+In order to download and install my_bsq:
 
 ```
 git clone git@git.us.qwasar.io:my_bsq_181466_qvmu4t/my_bsq.git
