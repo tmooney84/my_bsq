@@ -1,19 +1,33 @@
 # Welcome to My Bsq
-***
+***s
 
 ## Task
-TODO - What is the problem? And where is the challenge?
+my_bsq presents a matrix of '.'s and 'o's, and the program must find the largest square in an algorithmically efficient way.
 
 ## Description
-TODO - How have you solved the problem?
+I used a dynamically programmed linear matrix to minimize the necessary time and space required in order to solve this puzzle.
 
 ## Installation
-TODO - How to install your project? npm install? make? make re?
+
+To install my_bsq:
+
+```
+git clone git@git.us.qwasar.io:my_bsq_181466_qvmu4t/my_bsq.git
+```
+
+To compile my_bsq:
+
+```
+make my_bsq
+```
 
 ## Usage
-TODO - How does it work?
+Run my_bsq alongsize file named file.txt with the matrix that is to be tested.
+
+Run my_bsq:
+
 ```
-./my_project argument1 argument2
+./my_bsq
 ```
 
 ### The Core Team
