@@ -64,9 +64,15 @@ int find_max_square(char **matrix, int length, int *square_info)
     return 0;
 }
 
-int main(int /*argc*/, char ** argv)
+int main(int argc, char ** argv)
 {
     // open file
+    if(argc != 2)
+    {
+        perror("Please add filename to run my_bsq: ./my_bsq [filename]");
+        return -1;
+    }
+
     char file_name[NAME_LENGTH];
     memset(file_name, '\0', NAME_LENGTH);
     
