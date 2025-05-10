@@ -52,8 +52,8 @@ int find_max_square(char **matrix, int length, int *square_info)
             else
             {
                 dp_array[j] = 0;
-                prev = tmp;
             }
+                prev = tmp;
         }
     }
 
