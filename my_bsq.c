@@ -27,8 +27,8 @@ int find_max_square(char **matrix, int length, int *square_info)
     int corner_y = -1;
     int max_len = 0;
 
-    int dp_array[length + 1]; // extra 1 to create "dummy left border" to array
-    memset(dp_array, 0, length + 1);
+    char dp_array[length + 1]; // extra 1 to create "dummy left border" to array
+    memset(dp_array, '\0', sizeof(dp_array));
 
     for (int i = 0; i < length; i++)
     {
@@ -74,7 +74,7 @@ int main()
     }
 
     char buffer[buffer_length];
-    memset(buffer, '\0', buffer_length);
+    memset(buffer, '\0', sizeof(buffer));
 
     // get length
     fgets(buffer, buffer_length, fptr);
@@ -144,7 +144,7 @@ int main()
     {
         for(int j = corner_x - (max_len - 1); j <= corner_x; j++)
         {
-            matrix[i][j] = 'o';
+            matrix[i][j] = 'x';
         }
     }
 
